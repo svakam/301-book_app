@@ -16,7 +16,6 @@ function getForm(request, response) {
 
 function getBookInfo(request, response) {
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
-  response.send(request.body);
   let typeOfSearch = request.body.search[1];
   let searchQuery = request.body.search[0];
   if (typeOfSearch === 'title') {
@@ -28,12 +27,17 @@ function getBookInfo(request, response) {
 
   superagent.get(url)
     .then(results => {
-      let bookArr = results.body.items.map((object) => {
-        return new Book(object.volumeInfo);
-      });
-
-      response.render('pages/searches/show', bookArr);
-    });
+      if (results.body.items) {
+        let bookArr = results.body.items.map((object) => {
+          return new Book(object.volumeInfo);
+        });
+        response.render('pages/searches/show', { bookArray: bookArr });
+      }
+      else {
+        response.render('pages/error');
+      }
+    })
+    .catch(error => console.error(error));
 }
 
 // add https:// to links if not already https://
