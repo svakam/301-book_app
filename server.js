@@ -57,7 +57,9 @@ function Book(bookObj) {
   this.title = bookObj.title || 'no title available';
   this.author = bookObj.authors[0] || 'no author available';
   this.summary = bookObj.description || 'no description available';
-  this.image_url = addHttps(bookObj.imageLinks.thumbnail) || 'no image available';
+  if (bookObj.imageLinks) {
+    this.image_url = addHttps(bookObj.imageLinks.thumbnail) || 'no image available';
+  }
 }
 
 app.get('/', getForm);
