@@ -5,7 +5,7 @@ const app = express();
 const superagent = require('superagent');
 require('ejs');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded());
@@ -57,7 +57,9 @@ function Book(bookObj) {
   this.title = bookObj.title || 'no title available';
   this.author = bookObj.authors[0] || 'no author available';
   this.summary = bookObj.description || 'no description available';
-  this.image_url = addHttps(bookObj.imageLinks.thumbnail) || 'no image available';
+  if (bookObj.imageLinks) {
+    this.image_url = addHttps(bookObj.imageLinks.thumbnail) || 'no image available';
+  }
 }
 
 app.get('/', getForm);
