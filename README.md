@@ -45,30 +45,30 @@ Actual time needed to complete: 5 minutes
 
 ### Number and name of feature: Feature 3
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 10:10am
 
-Finish time: _____
+Finish time: 10:40am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 40 minutes
 
 ### Number and name of feature: Feature 4
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 10:40am
 
-Finish time: _____
+Finish time: 11:25am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 45 minutes
 
 ### Number and name of feature: Feature 5
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 11:30am
 
-Finish time: _____
+Finish time: 12pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30 minutes
