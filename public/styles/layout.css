@@ -1,0 +1,33 @@
+h2 {
+  text-align: center;
+}
+article {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 40px solid rgb(168, 167, 167);
+  border-right: 40px solid rgb(168, 167, 167);
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+img{
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid rgb(233, 233, 233);
+  border-radius: 5px;
+}
+p{
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 10px;
+}
+.book-summary{
+  border: 5px solid rgb(168, 167, 167);
+}

@@ -7,6 +7,7 @@ require('ejs');
 
 const PORT = process.env.PORT || 3001;
 app.use(express.static('./public'));
+// says go to the view folder automatically when using ejs
 app.set('view engine', 'ejs');
 app.use(express.urlencoded());
 
