@@ -1,4 +1,10 @@
-h2 {
+/* mobile */
+
+html {
+  width: 480px;
+}
+
+h1, h2 {
   text-align: center;
 }
 
@@ -11,10 +17,14 @@ article {
   border-right: 40px solid rgb(168, 167, 167);
   border-radius: 5px;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 250px;
-  margin-left: 250px;
+  margin: 40px 10px 40px 10px;
+  animation-name: book;
+  animation-duration: 0.8s;
+}
+
+@keyframes book {
+  from {background-color: black;}
+  to {background-color: lightgrey;}
 }
 
 img {
@@ -24,7 +34,8 @@ img {
   border-radius: 5px;
 }
 
-p {
+h2, h3, h4 {
+  font-weight: bold;
   border-radius: 5px;
   text-align: center;
   margin-left: 50px;
@@ -32,6 +43,39 @@ p {
   padding: 10px;
 }
 
+p {
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+  max-height: 325px;
+  overflow: auto;
+}
+
 .book-summary {
   border: 5px solid rgb(168, 167, 167);
+}
+
+/* tablet */ 
+@media (min-width: 768px) {
+  html {
+    width: 768px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* desktop */
+@media (min-width: 930px) {
+  html {
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
