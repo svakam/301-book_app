@@ -56,10 +56,12 @@ let addHttps = (string) => {
 // constructor
 function Book(bookObj) {
   this.title = bookObj.title || 'no title available';
-  this.author = bookObj.authors[0] || 'no author available';
-  this.summary = bookObj.description || 'no description available';
+  if (bookObj.authors) {
+    this.author = bookObj.authors[0] || 'no author available';
+  }
+  this.summary = bookObj.description || '(no description available)';
   if (bookObj.imageLinks) {
-    this.image_url = addHttps(bookObj.imageLinks.thumbnail) || 'no image available';
+    this.image_url = addHttps(bookObj.imageLinks.thumbnail) || '(no image available)';
   }
 }
 

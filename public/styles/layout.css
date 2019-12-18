@@ -1,5 +1,5 @@
+/* results page */
 /* mobile */
-
 html {
   width: 480px;
 }
@@ -9,7 +9,6 @@ h1, h2 {
 }
 
 article {
-  background-color: lightgrey;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -18,13 +17,6 @@ article {
   border-radius: 5px;
   align-items: center;
   margin: 40px 10px 40px 10px;
-  animation-name: book;
-  animation-duration: 0.8s;
-}
-
-@keyframes book {
-  from {background-color: black;}
-  to {background-color: lightgrey;}
 }
 
 img {
@@ -32,10 +24,10 @@ img {
   margin-right: auto;
   border: 10px solid rgb(233, 233, 233);
   border-radius: 5px;
+  /* width: 40%; */
 }
 
 h2, h3, h4 {
-  font-weight: bold;
   border-radius: 5px;
   text-align: center;
   margin-left: 50px;
@@ -51,10 +43,6 @@ p {
   padding: 20px;
   max-height: 325px;
   overflow: auto;
-}
-
-.book-summary {
-  border: 5px solid rgb(168, 167, 167);
 }
 
 /* tablet */ 
@@ -77,5 +65,57 @@ p {
   body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+  article {
+    margin: 40px 30px 40px 30px;
+  }
+}
+
+/* form page */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset, label, button {
+  width: 70%;
+  margin: 15px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form:nth-of-type(1) {
+  text-align: center;
+}
+
+#indexbox {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#indexbox, button {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+}
+
+button {
+  width: 75%;
+  height: 60px;
+}
+
+@media (min-width: 930px) {
+  body {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
